@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+
+    <string name="q1">Which framework is used for the app development?</string>
+    <string name="q1_a">Django</string>
+    <string name="q1_b">Pandas</string>
+    <string name="q1_c">Ionic Capacitor</string>
+    <string name="q1_d">Laravel</string>
+    <string name="q1_ans">c</string>
+</resources>
