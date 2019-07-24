@@ -96,7 +96,7 @@
                     android:layout_marginBottom="@dimen/button_margin">
 
                     <Button
-                        android:id="@+id/A"
+                        android:id="@+id/btn_a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -119,9 +119,9 @@
                         android:text="A"
                         android:textColor="@android:color/black"
                         android:textSize="22sp"
-                        app:layout_constraintBottom_toTopOf="@+id/A"
-                        app:layout_constraintStart_toStartOf="@+id/A"
-                        app:layout_constraintTop_toBottomOf="@+id/A" />
+                        app:layout_constraintBottom_toTopOf="@+id/btn_a"
+                        app:layout_constraintStart_toStartOf="@+id/btn_a"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_a" />
 
                 </android.support.constraint.ConstraintLayout>
 
@@ -131,7 +131,7 @@
                     android:layout_marginBottom="@dimen/button_margin">
 
                     <Button
-                        android:id="@+id/B"
+                        android:id="@+id/btn_b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -154,9 +154,9 @@
                         android:text="B"
                         android:textColor="@android:color/black"
                         android:textSize="22sp"
-                        app:layout_constraintBottom_toTopOf="@+id/B"
-                        app:layout_constraintStart_toStartOf="@+id/B"
-                        app:layout_constraintTop_toBottomOf="@+id/B" />
+                        app:layout_constraintBottom_toTopOf="@+id/btn_b"
+                        app:layout_constraintStart_toStartOf="@+id/btn_b"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_b" />
                 </android.support.constraint.ConstraintLayout>
 
                 <android.support.constraint.ConstraintLayout
@@ -165,7 +165,7 @@
                     android:layout_marginBottom="@dimen/button_margin">
 
                     <Button
-                        android:id="@+id/C"
+                        android:id="@+id/btn_c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -188,9 +188,9 @@
                         android:text="C"
                         android:textColor="@android:color/black"
                         android:textSize="22sp"
-                        app:layout_constraintBottom_toTopOf="@+id/C"
-                        app:layout_constraintStart_toStartOf="@+id/C"
-                        app:layout_constraintTop_toBottomOf="@+id/C" />
+                        app:layout_constraintBottom_toTopOf="@+id/btn_c"
+                        app:layout_constraintStart_toStartOf="@+id/btn_c"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_c" />
                 </android.support.constraint.ConstraintLayout>
 
                 <android.support.constraint.ConstraintLayout
@@ -199,7 +199,7 @@
                     android:layout_marginBottom="@dimen/button_margin">
 
                     <Button
-                        android:id="@+id/D"
+                        android:id="@+id/btn_d"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -222,9 +222,9 @@
                         android:text="D"
                         android:textColor="@android:color/black"
                         android:textSize="22sp"
-                        app:layout_constraintBottom_toTopOf="@+id/D"
-                        app:layout_constraintStart_toStartOf="@+id/D"
-                        app:layout_constraintTop_toBottomOf="@+id/D" />
+                        app:layout_constraintBottom_toTopOf="@+id/btn_d"
+                        app:layout_constraintStart_toStartOf="@+id/btn_d"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_d" />
                 </android.support.constraint.ConstraintLayout>
 
             </LinearLayout>
