@@ -7,4 +7,11 @@
     <string name="q1_c">Ionic Capacitor</string>
     <string name="q1_d">Laravel</string>
     <string name="q1_ans">Ionic Capacitor</string>
+
+    <string name="q2">Which framework is used for the app development?</string>
+    <string name="q2_a">Django</string>
+    <string name="q2_b">Pandas</string>
+    <string name="q2_c">Ionic Capacitor</string>
+    <string name="q2_d">Laravel</string>
+    <string name="q2_ans">Laravel</string>
 </resources>

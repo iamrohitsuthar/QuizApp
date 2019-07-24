@@ -44,7 +44,6 @@ public class QuizDashboardActivity extends AppCompatActivity {
     }
 
     private void loadQuestions() {
-        while(questionTracker < questionHolderArrayList.size()) {
             mTvQuestionNo.setText(String.valueOf(questionTracker+1));
             mTvQuestion.setText(questionHolderArrayList.get(questionTracker).getQuestion());
             mBtnOptionA.setText(questionHolderArrayList.get(questionTracker).getOptionA());
@@ -52,70 +51,76 @@ public class QuizDashboardActivity extends AppCompatActivity {
             mBtnOptionC.setText(questionHolderArrayList.get(questionTracker).getOptionC());
             mBtnOptionD.setText(questionHolderArrayList.get(questionTracker).getOptionD());
             checkQuestion();
-        }
     }
 
     private void checkQuestion() {
         mBtnOptionA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                which = mBtnOptionA;
                 if(questionHolderArrayList.get(questionTracker).getOptionCorrect().equals(mBtnOptionA.getText().toString())) {
                     //correct
                     mBtnOptionA.setBackground(getResources().getDrawable(R.drawable.custom_button_correct));
-                    isCorrect = true;
                 }
+                else {
+                    mBtnOptionA.setBackground(getResources().getDrawable(R.drawable.custom_button_wrong));
+                }
+                updateQuestion();
             }
         });
 
         mBtnOptionB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                which = mBtnOptionB;
                 if(questionHolderArrayList.get(questionTracker).getOptionCorrect().equals(mBtnOptionB.getText().toString())) {
                     //correct
-                    mBtnOptionA.setBackground(getResources().getDrawable(R.drawable.custom_button_correct));
-                    isCorrect = true;
+                    mBtnOptionB.setBackground(getResources().getDrawable(R.drawable.custom_button_correct));
                 }
+                else {
+                    mBtnOptionB.setBackground(getResources().getDrawable(R.drawable.custom_button_wrong));
+                }
+                updateQuestion();
             }
         });
 
         mBtnOptionC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                which = mBtnOptionC;
                 if(questionHolderArrayList.get(questionTracker).getOptionCorrect().equals(mBtnOptionC.getText().toString())) {
                     //correct
-                    mBtnOptionA.setBackground(getResources().getDrawable(R.drawable.custom_button_correct));
-                    isCorrect = true;
+                    mBtnOptionC.setBackground(getResources().getDrawable(R.drawable.custom_button_correct));
                 }
+                else {
+                    mBtnOptionC.setBackground(getResources().getDrawable(R.drawable.custom_button_wrong));
+                }
+                updateQuestion();
             }
         });
 
         mBtnOptionD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                which = mBtnOptionD;
                 if(questionHolderArrayList.get(questionTracker).getOptionCorrect().equals(mBtnOptionD.getText().toString())) {
                     //correct
-                    mBtnOptionA.setBackground(getResources().getDrawable(R.drawable.custom_button_correct));
-                    isCorrect = true;
+                    mBtnOptionD.setBackground(getResources().getDrawable(R.drawable.custom_button_correct));
                 }
+                else {
+                    mBtnOptionD.setBackground(getResources().getDrawable(R.drawable.custom_button_wrong));
+                }
+                updateQuestion();
             }
         });
-        if(!isCorrect) {
-            which.setBackground(getResources().getDrawable(R.drawable.custom_button_wrong));
-            updateQuestion();
-        }
-        else
-            updateQuestion();
     }
 
     private void updateQuestion() {
-        questionTracker++;
+        if(questionTracker+1 < questionHolderArrayList.size()) {
+            questionTracker++;
+            loadQuestions();
+        }
+
     }
 
     private void addQuestions() {
         questionHolderArrayList.add(new QuestionHolder(getResources().getString(R.string.q1),getResources().getString(R.string.q1_a),getResources().getString(R.string.q1_b),getResources().getString(R.string.q1_c),getResources().getString(R.string.q1_d),getResources().getString(R.string.q1_ans)));
+        questionHolderArrayList.add(new QuestionHolder(getResources().getString(R.string.q2),getResources().getString(R.string.q2_a),getResources().getString(R.string.q2_b),getResources().getString(R.string.q2_c),getResources().getString(R.string.q2_d),getResources().getString(R.string.q2_ans)));
     }
 }
