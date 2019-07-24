@@ -3,6 +3,8 @@ package com.rohit.suthar.quizapp.activities;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -17,6 +19,8 @@ public class QuizDashboardActivity extends AppCompatActivity {
     private Button mBtnOptionA, mBtnOptionB, mBtnOptionC, mBtnOptionD;
     private ArrayList<QuestionHolder> questionHolderArrayList;
     private int questionTracker;
+    private Button which;
+    private boolean isCorrect = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +44,7 @@ public class QuizDashboardActivity extends AppCompatActivity {
     }
 
     private void loadQuestions() {
-        while(questionTracker <= questionHolderArrayList.size()) {
+        while(questionTracker < questionHolderArrayList.size()) {
             mTvQuestionNo.setText(String.valueOf(questionTracker+1));
             mTvQuestion.setText(questionHolderArrayList.get(questionTracker).getQuestion());
             mBtnOptionA.setText(questionHolderArrayList.get(questionTracker).getOptionA());
@@ -52,7 +56,63 @@ public class QuizDashboardActivity extends AppCompatActivity {
     }
 
     private void checkQuestion() {
+        mBtnOptionA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                which = mBtnOptionA;
+                if(questionHolderArrayList.get(questionTracker).getOptionCorrect().equals(mBtnOptionA.getText().toString())) {
+                    //correct
+                    mBtnOptionA.setBackground(getResources().getDrawable(R.drawable.custom_button_correct));
+                    isCorrect = true;
+                }
+            }
+        });
 
+        mBtnOptionB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                which = mBtnOptionB;
+                if(questionHolderArrayList.get(questionTracker).getOptionCorrect().equals(mBtnOptionB.getText().toString())) {
+                    //correct
+                    mBtnOptionA.setBackground(getResources().getDrawable(R.drawable.custom_button_correct));
+                    isCorrect = true;
+                }
+            }
+        });
+
+        mBtnOptionC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                which = mBtnOptionC;
+                if(questionHolderArrayList.get(questionTracker).getOptionCorrect().equals(mBtnOptionC.getText().toString())) {
+                    //correct
+                    mBtnOptionA.setBackground(getResources().getDrawable(R.drawable.custom_button_correct));
+                    isCorrect = true;
+                }
+            }
+        });
+
+        mBtnOptionD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                which = mBtnOptionD;
+                if(questionHolderArrayList.get(questionTracker).getOptionCorrect().equals(mBtnOptionD.getText().toString())) {
+                    //correct
+                    mBtnOptionA.setBackground(getResources().getDrawable(R.drawable.custom_button_correct));
+                    isCorrect = true;
+                }
+            }
+        });
+        if(!isCorrect) {
+            which.setBackground(getResources().getDrawable(R.drawable.custom_button_wrong));
+            updateQuestion();
+        }
+        else
+            updateQuestion();
+    }
+
+    private void updateQuestion() {
+        questionTracker++;
     }
 
     private void addQuestions() {
