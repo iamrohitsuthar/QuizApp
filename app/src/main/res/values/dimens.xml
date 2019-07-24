@@ -3,6 +3,6 @@
     <dimen name="app_title">35sp</dimen>
     <dimen name="question">22sp</dimen>
     <dimen name="question_no">35sp</dimen>
-    <dimen name="button_margin">20dp</dimen>
+    <dimen name="button_margin">1dp</dimen>
 
 </resources>
