@@ -96,13 +96,14 @@
                     android:layout_marginBottom="@dimen/button_margin">
 
                     <Button
-                        android:id="@+id/btn_a"
+                        android:id="@+id/a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
                         android:background="@drawable/custom_button"
                         android:text="@string/q1_a"
+                        android:onClick="optionAClicked"
                         android:textColor="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -119,9 +120,9 @@
                         android:text="A"
                         android:textColor="@android:color/black"
                         android:textSize="22sp"
-                        app:layout_constraintBottom_toTopOf="@+id/btn_a"
-                        app:layout_constraintStart_toStartOf="@+id/btn_a"
-                        app:layout_constraintTop_toBottomOf="@+id/btn_a" />
+                        app:layout_constraintBottom_toTopOf="@+id/a"
+                        app:layout_constraintStart_toStartOf="@+id/a"
+                        app:layout_constraintTop_toBottomOf="@+id/a" />
 
                 </android.support.constraint.ConstraintLayout>
 
@@ -131,13 +132,14 @@
                     android:layout_marginBottom="@dimen/button_margin">
 
                     <Button
-                        android:id="@+id/btn_b"
+                        android:id="@+id/b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
                         android:background="@drawable/custom_button"
                         android:text="@string/q1_b"
+                        android:onClick="optionBClicked"
                         android:textColor="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -154,9 +156,9 @@
                         android:text="B"
                         android:textColor="@android:color/black"
                         android:textSize="22sp"
-                        app:layout_constraintBottom_toTopOf="@+id/btn_b"
-                        app:layout_constraintStart_toStartOf="@+id/btn_b"
-                        app:layout_constraintTop_toBottomOf="@+id/btn_b" />
+                        app:layout_constraintBottom_toTopOf="@+id/b"
+                        app:layout_constraintStart_toStartOf="@+id/b"
+                        app:layout_constraintTop_toBottomOf="@+id/b" />
                 </android.support.constraint.ConstraintLayout>
 
                 <android.support.constraint.ConstraintLayout
@@ -165,13 +167,14 @@
                     android:layout_marginBottom="@dimen/button_margin">
 
                     <Button
-                        android:id="@+id/btn_c"
+                        android:id="@+id/c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
                         android:background="@drawable/custom_button"
                         android:text="@string/q1_c"
+                        android:onClick="optionCClicked"
                         android:textColor="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -188,9 +191,9 @@
                         android:text="C"
                         android:textColor="@android:color/black"
                         android:textSize="22sp"
-                        app:layout_constraintBottom_toTopOf="@+id/btn_c"
-                        app:layout_constraintStart_toStartOf="@+id/btn_c"
-                        app:layout_constraintTop_toBottomOf="@+id/btn_c" />
+                        app:layout_constraintBottom_toTopOf="@+id/c"
+                        app:layout_constraintStart_toStartOf="@+id/c"
+                        app:layout_constraintTop_toBottomOf="@+id/c" />
                 </android.support.constraint.ConstraintLayout>
 
                 <android.support.constraint.ConstraintLayout
@@ -199,13 +202,14 @@
                     android:layout_marginBottom="@dimen/button_margin">
 
                     <Button
-                        android:id="@+id/btn_d"
+                        android:id="@+id/d"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
                         android:background="@drawable/custom_button"
                         android:text="@string/q1_d"
+                        android:onClick="optionDClicked"
                         android:textColor="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -222,9 +226,9 @@
                         android:text="D"
                         android:textColor="@android:color/black"
                         android:textSize="22sp"
-                        app:layout_constraintBottom_toTopOf="@+id/btn_d"
-                        app:layout_constraintStart_toStartOf="@+id/btn_d"
-                        app:layout_constraintTop_toBottomOf="@+id/btn_d" />
+                        app:layout_constraintBottom_toTopOf="@+id/d"
+                        app:layout_constraintStart_toStartOf="@+id/d"
+                        app:layout_constraintTop_toBottomOf="@+id/d" />
                 </android.support.constraint.ConstraintLayout>
 
             </LinearLayout>
